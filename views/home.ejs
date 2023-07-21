@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <div id="todo-header">
+      <h1>TODO APP</h1>
+      <hr />
+      <form action="/create-task" method="post">
+        <h6>DESCRIPTION</h6>
+
+        <input type="text" placeholder="what do you need to do"  name="description" />
+        <hr />
+        <div id="catagory-dueDate">
+          <h6>CATAGORY</h6>
+          <input list="CATAGORY" name="catagory" />
+          <datalist id="CATAGORY">
+            <option  value="Personal"></option>
+            <option value="Work"></option>
+            <option value="School"></option>
+            <option value="Cleaning"></option>
+            <option value="Other"></option>
+          </datalist>
+        </div>
+        <hr>
+        <div id="date">
+            <h6>DUE DATE</h6>
+            <input type="date" name="date">
+        </div>
+        <hr>
+
+        <div id="done">
+
+            <button >ADD TASK</button>
+          </form>
+
+          
+        
+            
+          <!-- <button action= method="get" style="display: inline-block;"  >Delete TASK</button> -->
+          <a href="/delete-task"  id="delete-task"   > delete this</a>
+            
+        </div>
+        
+     
+    </div>
+    <hr>
+    <div class="all-tasks">
+        
+       <% for(let i of data_control){ %>
+        <div class="tasks">
+          
+            <input action="/delete-task/?task=<%= i.task %>" type="checkbox"  class="checkbox" >
+        
+        <p class="display-task"> <%= i.task %></p>
+        <p class="disply-date"><%= i.date %></p>
+        <p class="display-catagory"><%= i.catagory %></p>
+      </div>
+       <% }%>
+      
+  </div>
+    <script src="/js/script.js"></script>
+  </body>
+
+</html>

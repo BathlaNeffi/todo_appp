@@ -1,0 +1,31 @@
+#todo-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(158, 157, 157);
+    justify-content: center;
+
+}
+
+
+#todo-header h1{
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: unset;
+    align-items: center;
+    justify-content: space-between;
+}
+.all-tasks{
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: space-between;
+
+}
+.display-catagory{
+    padding: 10px;
+    background-color: pink;
+}
