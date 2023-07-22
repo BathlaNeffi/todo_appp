@@ -1,5 +1,9 @@
 const express=require('express');
 
+const db=require('../config/mongoose');
+
+const todoModel=require('../model/todo_model');
+
 const router=express.Router();
 
 router.use(express.urlencoded());

@@ -54,7 +54,7 @@
        <% for(let i of data_control){ %>
         <div class="tasks">
           
-            <input action="/delete-task/?task=<%= i.task %>" type="checkbox"  class="checkbox" >
+            <input action="/delete-task/?id=<%= i.id %>" type="checkbox"  class="checkbox" >
         
         <p class="display-task"> <%= i.task %></p>
         <p class="disply-date"><%= i.date %></p>

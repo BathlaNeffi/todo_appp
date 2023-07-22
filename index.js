@@ -3,6 +3,7 @@ const PORT=8000;
 const app=express();
 const path=require('path');
 
+
 // inform the server that for frontend ui we are using ejs
 
 app.set('view engine', "ejs");
